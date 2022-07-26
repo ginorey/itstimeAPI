@@ -6,16 +6,16 @@ from flask import Flask, jsonify, request
 
 
 app = Flask(__name__)
-@app.route('/allfighters', methods=['GET'])
+@app.route('/api/allfighters', methods=['GET'])
 def all_fighters():
     with open('data/fighter_info.json', 'r') as f:
         temp = f.read()
         data = json.loads(temp)
     return data
 
-@app.route('/ID', methods=['GET'])
+@app.route('/api/ID', methods=['GET'])
 def search_id():
-    requested_ID = request.args.get('ID')
+    requested_ID = int(request.args.get('ID'))
     print(requested_ID)
     with open('data/fighter_info.json', 'r') as f:
         temp = f.read()
@@ -26,7 +26,7 @@ def search_id():
             else:
                 return jsonify({'error': 'ID was not found.'})
         
-app.route('/name', methods=['GET'])
+app.route('/api/name', methods=['GET'])
 def search_name():
     requested_name = request.args.get('name')
     print(requested_name)
@@ -34,5 +34,5 @@ def search_name():
         temp = f.read()
         data = json.loads(temp)
 
-
-app.run()
+if __name__ == "__main__":
+    app.run()
