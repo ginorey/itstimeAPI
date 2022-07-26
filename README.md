@@ -1,5 +1,6 @@
 # itsTimeAPI
 This repository hosts the code that runs the itsTimeAPI.
+
 The server is going to be being run on Digital Ocean and use CentOS.
 
 As this is still in development, anything is subject to change.
