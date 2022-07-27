@@ -304,7 +304,7 @@
       </span>
     </a>
     <div class="toc-wrapper">
-      <img src="{{ url_for('static', filename='images/israel.jpg') }}" class="logo" alt="" />
+      <img src="{{ url_for('static', filename='images/israel.jpg')}}" class="logo" alt="" />
         <div class="lang-selector">
               <a href="#" data-language-name="shell">shell</a>
         </div>
@@ -320,13 +320,13 @@
             <a href="#authentication" class="toc-h1 toc-link" data-title="Getting Started">Getting Started</a>
           </li>
           <li>
-            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Fighters</a>
+            <a href="#fighters" class="toc-h1 toc-link" data-title="Fighters">Fighters</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Fighters</a>
+                    <a href="#get-all-fighters" class="toc-h2 toc-link" data-title="Get All Fighters">Get All Fighters</a>
                   </li>
                   <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Fighter</a>
+                    <a href="#get-a-specific-fighter" class="toc-h2 toc-link" data-title="Get a Specific Fighter">Get a Specific Fighter</a>
                   </li>
               </ul>
           </li>
@@ -344,7 +344,7 @@
         <h1 id='introduction'>Introduction</h1>
 <p>Welcome to the itsTIME API. You can use our API to access itsTIME API endpoints, which can get information on fighters in the UFC.</p>
 
-<p>This is an <a href="https://github.com/ginorey/itstimeAPI">open source project.</a> Feel free to open issues and pull requests.</p>
+<p>This is an <a href="https://www.ginorey.com">open source project.</a> Feel free to open issues and pull requests.</p>
 
 <p>As this is an ongoing project, everything is subject to change. Currently you are able to pull only information from the fighters, but I will be adding the ability to pull information on each event.</p>
 
@@ -363,19 +363,19 @@
   <li>Rate limit of 30 requests per minute.</li>
 </ul>
 
-<h1 id='kittens'>Fighters</h1><h2 id='get-all-kittens'>Get All Fighters</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<h1 id='fighters'>Fighters</h1><h2 id='get-all-fighters'>Get All Fighters</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
 
 <span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
+<span class="n">api</span><span class="p">.</span><span class="nf">fighters</span><span class="p">.</span><span class="nf">get</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
 
 <span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="n">kittens</span><span class="p">.</span><span class="n">get</span><span class="p">()</span>
+<span class="n">api</span><span class="p">.</span><span class="n">fighters</span><span class="p">.</span><span class="n">get</span><span class="p">()</span>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://itstimeapi.com/api/allfighters"</span> <span class="se">\</span>
 </code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
 
 <span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">();</span>
+<span class="kd">let</span> <span class="nx">fighters</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">fighters</span><span class="p">.</span><span class="kd">get</span><span class="p">();</span>
 </code></pre></div>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -406,7 +406,7 @@
 <p><code>GET http://itstimeapi.com/api/allfighters</code></p>
 <h3 id='query-parameters'>Query Parameters [WORKING]</h3>
 
-<h2 id='get-a-specific-kitten'>Get a Specific Fighter</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<h2 id='get-a-specific-fighter'>Get a Specific Fighter</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
 
 <span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
 <span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
@@ -430,14 +430,6 @@
 <td>The ID of the fighter to retrieve</td>
 </tr>
 <tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to delete</td>
-</tr>
 </tbody></table>
 <h1 id='errors'>Errors</h1>
 
