@@ -2,10 +2,15 @@
 # encoding: utf-8
 
 import json
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 
 
-app = Flask(__name__)
+app = Flask(__name__,)
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
 @app.route('/api/allfighters', methods=['GET'])
 def all_fighters():
     with open('data/fighter_info.json', 'r') as f:

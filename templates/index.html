@@ -1,48 +1,486 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-            <!-- Standard Encoding-->
-                <meta charset="UTF-8">
-                
-            <!-- Renders the width of the page-->
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-            <!-- Specifies document mode for IE-->
-                <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta
+            name="description"
+            content="Documentation for the Kittn API"
+        >
+    <title>itsTIMEAPI Reference</title>
 
-            <!-- Title of Site-->
-                <title>UFC Tracker</title>
-            
-            <body style="background-color:grey;"></body>
+    <style media="screen">
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+  color: #555555
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s, .highlight .sa, .highlight .dl {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf, .highlight .fm {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv, .highlight .vm {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #f92672;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <style media="print">
+      * {
+        -webkit-transition:none!important;
+        transition:none!important;
+      }
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight, .highlight .w {
+  color: #586e75;
+}
+.highlight .err {
+  color: #002b36;
+  background-color: #dc322f;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs {
+  color: #657b83;
+}
+.highlight .cp {
+  color: #b58900;
+}
+.highlight .nt {
+  color: #b58900;
+}
+.highlight .o, .highlight .ow {
+  color: #93a1a1;
+}
+.highlight .p, .highlight .pi {
+  color: #93a1a1;
+}
+.highlight .gi {
+  color: #859900;
+}
+.highlight .gd {
+  color: #dc322f;
+}
+.highlight .gh {
+  color: #268bd2;
+  background-color: #002b36;
+  font-weight: bold;
+}
+.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
+  color: #6c71c4;
+}
+.highlight .kc {
+  color: #cb4b16;
+}
+.highlight .kt {
+  color: #cb4b16;
+}
+.highlight .kd {
+  color: #cb4b16;
+}
+.highlight .s, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
+  color: #859900;
+}
+.highlight .sa {
+  color: #6c71c4;
+}
+.highlight .sr {
+  color: #2aa198;
+}
+.highlight .si {
+  color: #d33682;
+}
+.highlight .se {
+  color: #d33682;
+}
+.highlight .nn {
+  color: #b58900;
+}
+.highlight .nc {
+  color: #b58900;
+}
+.highlight .no {
+  color: #b58900;
+}
+.highlight .na {
+  color: #268bd2;
+}
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mx {
+  color: #859900;
+}
+.highlight .ss {
+  color: #859900;
+}
+    </style>
+    <link href="{{ url_for('static', filename= 'stylesheets/screen-c9d8fa83.css') }}" rel="stylesheet" media="screen"/>
+    <link href="{{ url_for('static', filename=  'stylesheets/print-953e3353.css') }}" rel="stylesheet" media="print" />
+      <script src="{{ url_for('static', filename= 'javascripts/all-b12a2749.js')  }}"></script>
 
-            <!-- Linking CSS-->
-            <link href="/Users/gino/Desktop/Projects/UFC-Tracking/templates/style.css" rel = "stylesheet" type = "text/css">
+    <script>
+      $(function() { setupCodeCopy(); });
+    </script>
+  </head>
 
-            <!--Linking JS-->
-            <body>
-	            <script src="index.js"></script>
-            </body>
-    </head>
+  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="{{ url_for('static', filename= 'images/navbar-cad8cdcb.png') }}" alt="" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="{{ url_for('static', filename='images/israel.jpg') }}" class="logo" alt="" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="shell">shell</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#authentication" class="toc-h1 toc-link" data-title="Getting Started">Getting Started</a>
+          </li>
+          <li>
+            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Fighters</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Fighters</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Fighter</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+          </li>
+      </ul>
+        <ul class="toc-footer">
+            <li><a href='#'>Thank you for supporting!</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='introduction'>Introduction</h1>
+<p>Welcome to the itsTIME API. You can use our API to access itsTIME API endpoints, which can get information on fighters in the UFC.</p>
 
-        <body>
-                <!-- Tab Links-->
-                <div class="tab">
-                    <button class="tablinks" onclick="openTab(event, 'Champions')">Champions</button>
-                    <button class="tablinks" onclick="openTab(event, 'Rankings')">Rankings</button>
-                    <button class="tablinks" onclick="openTab(event, 'Search')">Search</button>
-                </div>
+<p>This is an <a href="https://github.com/ginorey/itstimeAPI">open source project.</a> Feel free to open issues and pull requests.</p>
 
-                <!-- Tab Content -->
-                <div id="Champions" class="tabcontent">
-                    <h3>Champions</h3>
-                </div>
-                <div id="Rankings" class="tabcontent>">
-                    <h3>Rankings</h3>
-                </div>
-                <div id="Search" class="tabcontent">
-                    <h3>Search</h3>
-                </div>
-        </body>
+<p>As this is an ongoing project, everything is subject to change. Currently you are able to pull only information from the fighters, but I will be adding the ability to pull information on each event.</p>
 
+<p>You can use my free API to access all UFC related data, no email or API key required.</p>
 
+<p>This API was created by me, <a href="https://www.linkedin.com/in/ginorey/">Gino Rey</a>. Feel free to message me on LinkedIn, or Discord if you have any questions!.</p>
+
+<h1 id='authentication'>Getting Started</h1>
+
+<p>You need a computer with an internet connection.</p>
+<ul>
+  <li>No email required.</li>
+  <li>No API key required.</li>
+  <li>Contains data from all fighters in the entire UFC.</li>
+  <li>The data is updated once a day at 6:00AM EST.</li>
+  <li>Rate limit of 30 requests per minute.</li>
+</ul>
+
+<h1 id='kittens'>Fighters</h1><h2 id='get-all-kittens'>Get All Fighters</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
+<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
+</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
+<span class="n">api</span><span class="p">.</span><span class="n">kittens</span><span class="p">.</span><span class="n">get</span><span class="p">()</span>
+</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://itstimeapi.com/api/allfighters"</span> <span class="se">\</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">();</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"ID"</span><span class="p">:</span><span class="w"> </span><span class="mi">2244</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Chad Mendes"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"record"</span><span class="p">:</span><span class="w"> </span><span class="s2">"18-5-0"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"nickname"</span><span class="p">:</span><span class="w"> </span><span class="mi">"Money"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">"5' 6\"</span><span class="w">
+    </span><span class="nl">"reach"</span><span class="p">:</span><span class="w"> </span><span class="mi">"145 lbs."</span><span class="w">
+    </span><span class="nl">"stance"</span><span class="p">:</span><span class="w"> </span><span class="mi">"66\"</span><span class="w">
+    </span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">"Orthodox"</span><span class="w">
+    </span><span class="nl">"dob"</span><span class="p">:</span><span class="w"> </span><span class="mi">"May 01, 1985"</span><span class="w">
+    </span><span class="nl">"SLpM"</span><span class="p">:</span><span class="w"> </span><span class="mi">"2.78"</span><span class="w">
+    </span><span class="nl">"Str. Acc"</span><span class="p">:</span><span class="w"> </span><span class="mi">"49%"</span><span class="w">
+    </span><span class="nl">"SApM"</span><span class="p">:</span><span class="w"> </span><span class="mi">"2.35"</span><span class="w">
+    </span><span class="nl">"Str. Def"</span><span class="p">:</span><span class="w"> </span><span class="mi">" "</span><span class="w">
+    </span><span class="nl">"TD Avg"</span><span class="p">:</span><span class="w"> </span><span class="mi">"4.13"</span><span class="w">
+    </span><span class="nl">"TD Acc"</span><span class="p">:</span><span class="w"> </span><span class="mi">"55%"</span><span class="w">
+    </span><span class="nl">"TD Def"</span><span class="p">:</span><span class="w"> </span><span class="mi">"100%"</span><span class="w">
+    </span><span class="nl">"Sub. Avg."</span><span class="p">:</span><span class="w"> </span><span class="mi">"0.3 "</span><span class="w">
+      
+</div>
+<p>This endpoint retrieves all fighters.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET http://itstimeapi.com/api/allfighters</code></p>
+<h3 id='query-parameters'>Query Parameters [WORKING]</h3>
+
+<h2 id='get-a-specific-kitten'>Get a Specific Fighter</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
+<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+
+</div>
+<p>This endpoint retrieves a specific fighter.</p>
+
+<aside class="warning">Not all players will have all of the information available.</aside>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET http://itstimeapi.com/api/&lt;ID&gt;</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the fighter to retrieve</td>
+</tr>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the kitten to delete</td>
+</tr>
+</tbody></table>
+<h1 id='errors'>Errors</h1>
+
+<p>The itsTIME API uses the following error</p>
+
+<table><thead>
+<tr>
+<th>Error Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>400</td>
+<td>Bad Request -- Your request is invalid.</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found -- The specified data could not be found.</td>
+</tr>
+<tr>
+<td>406</td>
+<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
+</tr>
+<tr>
+<td>429</td>
+<td>Too Many Requests -- Slow down cowboy!</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
+</tr>
+</tbody></table>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="shell">shell</a>
+          </div>
+      </div>
+    </div>
+  </body>
 </html>
