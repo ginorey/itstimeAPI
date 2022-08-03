@@ -3,7 +3,7 @@ version: "3"
 # define list of containers 
 services:
   # web app
-  itstimeapi:
+  web:
     # name of container
     container_name: itstimeapi
     # define service will be built with dockerfile
@@ -51,7 +51,7 @@ services:
       - ./user_conf.d:/etc/nginx/user_conf.d
     # boot after web app
     depends_on:
-      - itstimeapi
+      - web
 
 # define volumes that will persist if container reboot
 volumes:
