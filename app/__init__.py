@@ -3,8 +3,9 @@
 
 import json
 from flask import Flask, jsonify, request, render_template
+from dotenv import load_dotenv
 
-
+load_dotenv()
 app = Flask(__name__,)
 
 @app.route('/')
@@ -39,5 +40,6 @@ def search_name():
         temp = f.read()
         data = json.loads(temp)
 
-if __name__ == "__main__":
-    app.run()
+@app.errorhandler(404)
+def not_found(e):
+    return render_template("index.html")
