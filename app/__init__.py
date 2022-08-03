@@ -2,6 +2,7 @@
 # encoding: utf-8
 
 import json
+import os 
 from flask import Flask, jsonify, request, render_template
 from dotenv import load_dotenv
 
@@ -10,7 +11,7 @@ app = Flask(__name__,)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html', title="itsTimeAPI", url=os.getenv("URL"))
 
 @app.route('/api/allfighters', methods=['GET'])
 def all_fighters():
