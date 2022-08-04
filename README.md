@@ -58,7 +58,9 @@ Free Open Source UFC API.
 
 This is an ongoing project, therefore everything is subject to change. Currently you will be able to interface with the API and retrieve fighter data. Check the roadmap below for further features.
 
-This repository holds the code that runs the itsTimeAPI. You can use this API for free, no email or API key required.
+This repository holds the code that runs [www.itsTimeAPI.com](https://itstimeapi.com/#introduction) and its API. You can use this API for free, no email or API key required.
+
+The script to retrieve data is held in a private repository elsewhere.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -112,7 +114,8 @@ Once you have Python installed we will install all of the requirements below.
 
 **Heads Up!!**
 
-Since you are running locally make sure to use your local ip instead of the site address. 
+* Since you are running locally make sure to use your local ip instead of the site address. 
+* You will only be able to have access to our sample data. For full access please use our API.
 
 Instead of this:
 ```
@@ -135,7 +138,7 @@ curl "localhost:5000/api/allfighters"
     - [ ] Python
     - [ ] Ruby
     - [ ] Javascript
-- [ ] Add UFC Events Scraper 
+- [ ] Add UFC Events 
 
 See the [open issues](https://github.com/ginorey/itstimeAPI/issues) for a full list of proposed features (and known issues).
 
