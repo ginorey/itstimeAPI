@@ -58,10 +58,6 @@ This is an ongoing project, therefore everything is subject to change. Currently
 
 This repository holds the code that runs the itsTimeAPI. You can use this API for free, not email or API key required.
 
-If you want a copy of the links pulled please email me at gino.rey@outlook.com
-
-API was originally created by Gino Rey.
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -177,6 +173,8 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 ## Contact
 
 Gino Rey - [LinkedIn](https://www.linkedin.com/in/ginorey/) - gino.rey@outlook.com
+
+If you want a copy of the raw data please email me at gino.rey@outlook.com
 
 Personal Site - [Link](https://www.ginorey.com)
 
