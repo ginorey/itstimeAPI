@@ -3,7 +3,9 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-
+ <a href="https://github.com/ginorey/itstimeapi">
+    <img src="app/static/images/itstimeAPI.png" alt="Logo" width="400" height="250">
+  </a>
   <h3 align="center">itsTimeAPI</h3>
 
   <p align="center">
