@@ -126,6 +126,11 @@ Once you have Python installed we will install all of the requirements below.
    ```js
    flask run
    ``` 
+4. Check [Documentation](https://itstimeapi.com/#introduction) for how to interact with API. 
+
+**Heads Up**
+
+Since you are running locally make sure to use your local ip instead of the site address. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
