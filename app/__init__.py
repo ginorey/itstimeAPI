@@ -15,7 +15,7 @@ def index():
 
 @app.route('/api/allfighters', methods=['GET'])
 def all_fighters():
-    with open('data/fighter_info.json', 'r') as f:
+    with open('app/data/fighter_info.json', 'r') as f:
         temp = f.read()
         data = json.loads(temp)
     return data
@@ -24,7 +24,7 @@ def all_fighters():
 def search_id():
     requested_ID = int(request.args.get('ID'))
     print(requested_ID)
-    with open('data/fighter_info.json', 'r') as f:
+    with open('app/data/fighter_info.json', 'r') as f:
         temp = f.read()
         data = json.loads(temp)
         for rows in data:
@@ -37,7 +37,7 @@ app.route('/api/name', methods=['GET'])
 def search_name():
     requested_name = request.args.get('name')
     print(requested_name)
-    with open('data/fighter_info.json', 'r') as f:
+    with open('app/data/fighter_info.json', 'r') as f:
         temp = f.read()
         data = json.loads(temp)
 

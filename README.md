@@ -127,9 +127,18 @@ Once you have Python installed we will install all of the requirements below.
    ```
 4. Check [Documentation](https://itstimeapi.com/#introduction) for how to interact with API. 
 
-**Heads Up**
+**Heads Up!!**
 
 Since you are running locally make sure to use your local ip instead of the site address. 
+
+Instead of
+```
+curl "https://itstimeapi.com/api/allfighters"
+```
+Use
+```
+curl "https://localhost/api/allfighters"
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
