@@ -4,7 +4,7 @@
 <br />
 <div align="center">
  <a href="https://github.com/ginorey/itstimeapi">
-    <img src="app/static/images/itstimeAPI.png" alt="Logo" width="400" height="250">
+    <img src="app/static/images/itstimeAPI-2.png" alt="Logo" width="400" height="250">
   </a>
   <h3 align="center">itsTimeAPI</h3>
 
