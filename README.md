@@ -134,7 +134,6 @@ curl "localhost:5000/api/allfighters"
 ## Roadmap
 
 - [ ] Fix Documentation Formatting
-- [ ] Add 
 - [ ] Add Data Pagination
 - [ ] Add Fighter ID Queries
 - [ ] Add Further Languages to Documentation
