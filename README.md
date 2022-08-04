@@ -104,9 +104,9 @@ To get a local copy up and running follow these simple example steps.
 The only prerequisite is to install Python. 
 Once you have Python installed we will install all of the requirements below. 
 
-* <a href="https://docs.python-guide.org/starting/install3/osx/">Mac Installation
+* [Mac Installation ](https://docs.python-guide.org/starting/install3/osx/)
 
-* <a href="https://docs.python.org/3/using/windows.html">Windows Installation
+* [Windows Installation](https://docs.python.org/3/using/windows.html)
 
 ### Installation
  
