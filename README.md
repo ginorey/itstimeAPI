@@ -3,9 +3,6 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/ginorey/itstimeapi">
-    <img src="app/static/images/1280px-UFC_Logo.svg.png" alt="Logo" width="400" height="250">
-  </a>
 
   <h3 align="center">itsTimeAPI</h3>
 
