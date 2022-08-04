@@ -58,7 +58,7 @@ Free Open Source UFC API.
 
 This is an ongoing project, therefore everything is subject to change. Currently you will be able to interface with the API and retrieve fighter data. Check the roadmap below for further features.
 
-This repository holds the code that runs the itsTimeAPI. You can use this API for free, no email or API key required.
+This repository holds the code that runs [www.itsTimeAPI.com](https://itstimeapi.com/#introduction) and its API.. You can use this API for free, no email or API key required.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
