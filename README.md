@@ -23,7 +23,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="app/static/images/1280px-UFC_logo-1.svg.png" alt="Logo" width="250" height="250">
+    <img src="app/static/images/1280px-UFC_logo-1.svg.png" alt="Logo" width="400" height="250">
   </a>
 
   <h3 align="center">itsTimeAPI</h3>
