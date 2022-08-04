@@ -60,6 +60,8 @@ This is an ongoing project, therefore everything is subject to change. Currently
 
 This repository holds the code that runs [www.itsTimeAPI.com](https://itstimeapi.com/#introduction) and its API. You can use this API for free, no email or API key required.
 
+The script to retrieve data is held in a private repository elsewhere.
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
