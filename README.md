@@ -119,11 +119,11 @@ Once you have Python installed we will install all of the requirements below.
 
 Since you are running locally make sure to use your local ip instead of the site address. 
 
-Instead of
+Instead of this:
 ```
 curl "https://itstimeapi.com/api/allfighters"
 ```
-Use
+Try:
 ```
 curl "localhost:5000/api/allfighters"
 ```
