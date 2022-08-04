@@ -23,7 +23,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="app/static/images/1280px-UFC_Logo.svg.png" alt="Logo" width="120" height="120">
+    <img src="app/static/images/1280px-UFC_Logo.svg.png" alt="Logo" width="500" height="500">
   </a>
 
   <h3 align="center">itsTimeAPI</h3>
@@ -111,9 +111,9 @@ To get a local copy up and running follow these simple example steps.
 The only prerequisite is to install Python. 
 Once you have Python installed we will install all of the requirements below. 
 
-* <a href="https://docs.python-guide.org/starting/install3/osx/"><strong>Mac Installation»</
+* <a href="https://docs.python-guide.org/starting/install3/osx/">Mac Installation
 
-* <a href="https://docs.python.org/3/using/windows.html"><strong>Windows Installation»</
+* <a href="https://docs.python.org/3/using/windows.html">>Windows Installation
 
 ### Installation
  
