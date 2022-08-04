@@ -137,7 +137,7 @@ curl "https://itstimeapi.com/api/allfighters"
 ```
 Use
 ```
-curl "https://localhost/api/allfighters"
+curl "localhost:5000/api/allfighters"
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
