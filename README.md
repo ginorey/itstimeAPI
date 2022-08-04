@@ -3,9 +3,6 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/ginorey/itstimeapi">
-    <img src="app/static/images/1280px-UFC_Logo.svg.png" alt="Logo" width="400" height="250">
-  </a>
 
   <h3 align="center">itsTimeAPI</h3>
 
@@ -59,11 +56,7 @@ Free Open Source UFC API.
 
 This is an ongoing project, therefore everything is subject to change. Currently you will be able to interface with the API and retrieve fighter data. Check the roadmap below for further features.
 
-This repository holds the code that runs the itsTimeAPI. You can use this API for free, not email or API key required.
-
-If you want a copy of the links pulled please email me at gino.rey@outlook.com
-
-API was originally created by Gino Rey.
+This repository holds the code that runs the itsTimeAPI. You can use this API for free, no email or API key required.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -180,6 +173,8 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 ## Contact
 
 Gino Rey - [LinkedIn](https://www.linkedin.com/in/ginorey/) - gino.rey@outlook.com
+
+If you want a copy of the raw data please email me at gino.rey@outlook.com
 
 Personal Site - [Link](https://www.ginorey.com)
 
