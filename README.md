@@ -114,7 +114,8 @@ Once you have Python installed we will install all of the requirements below.
 
 **Heads Up!!**
 
-Since you are running locally make sure to use your local ip instead of the site address. 
+* Since you are running locally make sure to use your local ip instead of the site address. 
+* You will only be able to have access to our sample data. For full access please use our API.
 
 Instead of this:
 ```
@@ -137,7 +138,7 @@ curl "localhost:5000/api/allfighters"
     - [ ] Python
     - [ ] Ruby
     - [ ] Javascript
-- [ ] Add UFC Events Scraper 
+- [ ] Add UFC Events 
 
 See the [open issues](https://github.com/ginorey/itstimeAPI/issues) for a full list of proposed features (and known issues).
 
