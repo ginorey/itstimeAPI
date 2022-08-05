@@ -133,7 +133,9 @@ curl "localhost:5000/api/allfighters"
 
 - [ ] Fix Documentation Formatting
 - [ ] Add Data Pagination
+- [ ] Update Documentation to show Pagination
 - [ ] Add Fighter ID Queries
+- [ ] Update Documentation to show FIghter ID Queries
 - [ ] Add Further Languages to Documentation
     - [ ] Python
     - [ ] Ruby
