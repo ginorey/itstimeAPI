@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <meta
             name="description"
-            content="Documentation for the Kittn API"
+            content="Documentation for the itsTIMEAPI"
         >
     <title>itsTIMEAPI Reference</title>
 
@@ -341,6 +341,9 @@
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
+
+<!-- Introduction Section-->
+
         <h1 id='introduction'>Introduction</h1>
 <p>Welcome to the itsTIME API. You can use our API to access itsTIME API endpoints, which can get information on fighters in the UFC.</p>
 
@@ -352,6 +355,8 @@
 
 <p>This API was created by me, <a href="https://www.linkedin.com/in/ginorey/">Gino Rey</a>. Feel free to message me on LinkedIn, or Discord if you have any questions!.</p>
 
+<!-- Getting Started Section-->
+
 <h1 id='authentication'>Getting Started</h1>
 
 <p>You need a computer with an internet connection.</p>
@@ -362,6 +367,8 @@
   <li>The data is updated once a day at 6:00AM EST.</li>
   <li>Rate limit of 30 requests per minute.</li>
 </ul>
+
+<!-- Getting all Fighter Section-->
 
 <h1 id='fighters'>Fighters</h1><h2 id='get-all-fighters'>Get All Fighters</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
 
@@ -406,6 +413,10 @@
 <p><code>GET https://itstimeapi.com/api/allfighters</code></p>
 <h3 id='query-parameters'>Query Parameters [IN PROGRESS]</h3>
 
+
+
+<!-- GETTING A SPECIFIC FIGHTER -->
+
 <h2 id='get-a-specific-fighter'>Get a Specific Fighter [IN PROGRESS]</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
 
 <span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
@@ -431,10 +442,12 @@
 </tr>
 <tr>
 </tbody></table>
+
+
+<!-- ERRORS-->
+
 <h1 id='errors'>Errors</h1>
-
 <p>The itsTIME API uses the following error</p>
-
 <table><thead>
 <tr>
 <th>Error Code</th>
