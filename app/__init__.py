@@ -27,11 +27,6 @@ def search_id():
     with open('app/data/fighter_info.json', 'r') as f:
         temp = f.read()
         data = json.loads(temp)
-        for rows in data:
-            if rows['ID'] == requested_ID:
-                return jsonify(rows)
-            else:
-                return jsonify({'error': 'ID was not found.'})
         
 app.route('/api/name', methods=['GET'])
 def search_name():
