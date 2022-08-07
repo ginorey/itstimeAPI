@@ -15,20 +15,20 @@ services:
       - .env
     # specify container should start after mysql service is up
     depends_on:
-      - mysql
+      - mongo
   # define mysql
-  mysql:
+  mongodb:
     # name of container
-    container_name: mysql
+    container_name: mongodb
     # lower resource usage than mysql
-    image: mariadb
+    image: mongo
     # restart on reboot
     restart: always
     # define secrets file
     env_file:
       - .env
     volumes:
-      - mydatabase:/var/lib/mysql
+      - mydatabase:/var/lib/mongodb
   # define nginx container 
   nginx:
     # define container name
