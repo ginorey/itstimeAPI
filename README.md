@@ -132,7 +132,7 @@ curl "localhost:5000/api/allfighters"
 
 <!-- ROADMAP -->
 ## Roadmap
-
+- [X] Add Each Fighters Fights
 - [ ] Fix Documentation Formatting
 - [ ] Add Data Pagination
 - [ ] Update Documentation to show Pagination
