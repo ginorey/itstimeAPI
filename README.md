@@ -126,6 +126,8 @@ Try:
 curl "localhost:5000/api/allfighters"
 ```
 
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/20573301-a640d47f-f44b-4777-95a5-41e520e7d188?action=collection%2Ffork&collection-url=entityId%3D20573301-a640d47f-f44b-4777-95a5-41e520e7d188%26entityType%3Dcollection%26workspaceId%3D01dd98f9-5339-47c4-b52b-795e01d65ac0)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ROADMAP -->

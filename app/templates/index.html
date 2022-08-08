@@ -317,7 +317,7 @@
             <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
           </li>
           <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="Getting Started">Getting Started</a>
+            <a href="#getting-started" class="toc-h1 toc-link" data-title="Getting Started">Getting Started</a>
           </li>
           <li>
             <a href="#fighters" class="toc-h1 toc-link" data-title="Fighters">Fighters</a>
@@ -343,8 +343,8 @@
       <div class="content">
 
 <!-- Introduction Section-->
+<h1 id='introduction'>Introduction</h1>
 
-        <h1 id='introduction'>Introduction</h1>
 <p>Welcome to the itsTIME API. You can use our API to access itsTIME API endpoints, which can get information on fighters in the UFC.</p>
 
 <p>This is an <a href="https://github.com/ginorey/itstimeAPI">open source project.</a> Feel free to open issues and pull requests.</p>
@@ -357,31 +357,35 @@
 
 <!-- Getting Started Section-->
 
-<h1 id='authentication'>Getting Started</h1>
+<h2 id='getting-started'>Getting Started</h2>
 
 <p>You need a computer with an internet connection.</p>
 <ul>
-  <li>No email required.</li>
-  <li>No API key required.</li>
-  <li>Contains data from all fighters in the entire UFC.</li>
-  <li>The data is updated once a day at 6:00AM EST.</li>
-  <li>Rate limit of 30 requests per minute.</li>
+<li>No email required.</li>
+<li>No API key required.</li>
+<li>Contains data from all fighters in the entire UFC.</li>
+<li>The data is updated 6:00AM EST after every UFC Event.</li>
+<li>Rate limit of 30 requests per minute.</li>
 </ul>
+
+<p><a href="https://app.getpostman.com/run-collection/20573301-a640d47f-f44b-4777-95a5-41e520e7d188?action=collection%2Ffork&collection-url=entityId%3D20573301-a640d47f-f44b-4777-95a5-41e520e7d188%26entityType%3Dcollection%26workspaceId%3D01dd98f9-5339-47c4-b52b-795e01d65ac0)"><img src="https://run.pstmn.io/button.svg" alt="Run in Postman" /></a></p>
 
 <!-- Getting all Fighter Section-->
 
-<h1 id='fighters'>Fighters</h1><h2 id='get-all-fighters'>Get All Fighters</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<h1 id='fighters'>Fighters</h1>
+<h2 id='get-all-fighters'>Get All Fighters</h2>
+<div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'fighters'</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
+<span class="n">api</span> <span class="o">=</span> <span class="no">fighters</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
 <span class="n">api</span><span class="p">.</span><span class="nf">fighters</span><span class="p">.</span><span class="nf">get</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">fighters</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
+<span class="n">api</span> <span class="o">=</span> <span class="n">fighters</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
 <span class="n">api</span><span class="p">.</span><span class="n">fighters</span><span class="p">.</span><span class="n">get</span><span class="p">()</span>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://itstimeapi.com/api/allfighters"</span> <span class="se">\</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">fighters</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">fighters</span><span class="dl">'</span><span class="p">);</span>
 
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">fighters</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
 <span class="kd">let</span> <span class="nx">fighters</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">fighters</span><span class="p">.</span><span class="kd">get</span><span class="p">();</span>
 </code></pre></div>
 <blockquote>
@@ -389,25 +393,27 @@
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"ID"</span><span class="p">:</span><span class="w"> </span><span class="mi">2244</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Chad Mendes"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"record"</span><span class="p">:</span><span class="w"> </span><span class="s2">"18-5-0"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"nickname"</span><span class="p">:</span><span class="w"> </span><span class="mi">"Money"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">"5' 6\"</span><span class="w">
-    </span><span class="nl">"reach"</span><span class="p">:</span><span class="w"> </span><span class="mi">"145 lbs."</span><span class="w">
-    </span><span class="nl">"stance"</span><span class="p">:</span><span class="w"> </span><span class="mi">"66\"</span><span class="w">
-    </span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">"Orthodox"</span><span class="w">
-    </span><span class="nl">"dob"</span><span class="p">:</span><span class="w"> </span><span class="mi">"May 01, 1985"</span><span class="w">
-    </span><span class="nl">"SLpM"</span><span class="p">:</span><span class="w"> </span><span class="mi">"2.78"</span><span class="w">
+    </span><span class="nl">"ID"</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Israel Adesanya"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"record"</span><span class="p">:</span><span class="w"> </span><span class="s2">"23-1-0"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"nickname"</span><span class="p">:</span><span class="w"> </span><span class="mi">"The Last Stylebender"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">"6' 4\"</span><span class="w">
+    </span><span class="nl">"reach"</span><span class="p">:</span><span class="w"> </span><span class="mi">"185 lbs."</span><span class="w">
+    </span><span class="nl">"stance"</span><span class="p">:</span><span class="w"> </span><span class="mi">"80\""</span><span class="w">
+    </span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">"Switch"</span><span class="w">
+    </span><span class="nl">"dob"</span><span class="p">:</span><span class="w"> </span><span class="mi">"Jul 22, 1989"</span><span class="w">
+    </span><span class="nl">"SLpM"</span><span class="p">:</span><span class="w"> </span><span class="mi">"3.93"</span><span class="w">
     </span><span class="nl">"Str. Acc"</span><span class="p">:</span><span class="w"> </span><span class="mi">"49%"</span><span class="w">
-    </span><span class="nl">"SApM"</span><span class="p">:</span><span class="w"> </span><span class="mi">"2.35"</span><span class="w">
+    </span><span class="nl">"SApM"</span><span class="p">:</span><span class="w"> </span><span class="mi">"2.67"</span><span class="w">
     </span><span class="nl">"Str. Def"</span><span class="p">:</span><span class="w"> </span><span class="mi">" "</span><span class="w">
-    </span><span class="nl">"TD Avg"</span><span class="p">:</span><span class="w"> </span><span class="mi">"4.13"</span><span class="w">
-    </span><span class="nl">"TD Acc"</span><span class="p">:</span><span class="w"> </span><span class="mi">"55%"</span><span class="w">
-    </span><span class="nl">"TD Def"</span><span class="p">:</span><span class="w"> </span><span class="mi">"100%"</span><span class="w">
-    </span><span class="nl">"Sub. Avg."</span><span class="p">:</span><span class="w"> </span><span class="mi">"0.3 "</span><span class="w">
-      
+    </span><span class="nl">"TD Avg"</span><span class="p">:</span><span class="w"> </span><span class="mi">"0.00"</span><span class="w">
+    </span><span class="nl">"TD Acc"</span><span class="p">:</span><span class="w"> </span><span class="mi">"0%"</span><span class="w">
+    </span><span class="nl">"TD Def"</span><span class="p">:</span><span class="w"> </span><span class="mi">"78%"</span><span class="w">
+    </span><span class="nl">"Sub. Avg."</span><span class="p">:</span><span class="w"> </span><span class="mi">"0.2"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+<span class="p">]</span><span class="w">      
 </div>
+
 <p>This endpoint retrieves all fighters.</p>
 <h3 id='http-request'>HTTP Request</h3>
 <p><code>GET https://itstimeapi.com/api/allfighters</code></p>
@@ -417,16 +423,16 @@
 
 <!-- GETTING A SPECIFIC FIGHTER -->
 
-<h2 id='get-a-specific-fighter'>Get a Specific Fighter [IN PROGRESS]</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<h2 id='get-a-specific-fighter'>Get a Specific Fighter [IN PROGRESS]</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'fighters'</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<span class="n">api</span> <span class="o">=</span> <span class="no">fighters</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
+<span class="n">api</span><span class="p">.</span><span class="nf">fightersns</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">fighters</span>
 
 </div>
 <p>This endpoint retrieves a specific fighter.</p>
 
-<aside class="warning">Not all players will have all of the information available.</aside>
+<aside class="warning">Not all fighters will have all of the information available.</aside>
 <h3 id='http-request-2'>HTTP Request</h3>
 <p><code>GET https://itstimeapi.com/api/&lt;ID&gt;</code></p>
 <h3 id='url-parameters'>URL Parameters</h3>
