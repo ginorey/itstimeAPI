@@ -1,0 +1,62 @@
+{ 
+    "data": [
+        {
+            "id": 1,
+            "name": "Tom Aaron",
+            "record": "5-3-0",
+            "nickname": "",
+            "height": "--",
+            "weight": "155 lbs.",
+            "reach": "--",
+            "stance": "",
+            "dateOfBirth": "Jul 13, 1978",
+            "significantStrikesLandedPerMinute": "0.00",
+            "significantStrikingAccuracy": "0%",
+            "significantStrikesAbsorbedPerMinute": "0.00",
+            "significantStrikeDefence": "",
+            "averageTakedownsLandedPer15Minutes": "0.00",
+            "takedownAccuracy": "0%",
+            "takedownDefense": "0%",
+            "averageSubmissionsAttemptedPer15Minutes": "0.0",
+            "fights": [
+                {
+                    "id": 1,
+                    "res": "loss",
+                    "fighter1": "Tom Aaron",
+                    "fighter2": "Matt Ricehouse",
+                    "fighter1KD": "--",
+                    "fighter2KD": "--",
+                    "fighter1STR": "--",
+                    "fighter2STR": "--",
+                    "fighter1TD": "--",
+                    "fighter2TD": "--",
+                    "fighter1SUB": "--",
+                    "fighter2SUB": "--",
+                    "event": "Strikeforce - Henderson vs. Babalu",
+                    "date": "Dec. 04, 2010",
+                    "method": "U-DEC",
+                    "round": "3",
+                    "time": "5:00"
+                },
+                {
+                    "id": 2,
+                    "res": "win",
+                    "fighter1": "Tom Aaron",
+                    "fighter2": "Eric Steenberg",
+                    "fighter1KD": "--",
+                    "fighter2KD": "--",
+                    "fighter1STR": "--",
+                    "fighter2STR": "--",
+                    "fighter1TD": "--",
+                    "fighter2TD": "--",
+                    "fighter1SUB": "--",
+                    "fighter2SUB": "--",
+                    "event": "Strikeforce - Heavy Artillery",
+                    "date": "May. 15, 2010",
+                    "method": "SUB",
+                    "round": "1",
+                    "time": "0:56"
+                }
+            ]
+        },
+}

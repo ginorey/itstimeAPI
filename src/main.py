@@ -1,11 +1,10 @@
 # pulls all fighter info and links
-from src.scraper import getFighterProfileLinks, url_reader, fighterName, get_fighter_info
-from src.scraper import fighterRecord, fighterNickname, fighterDescription, fightDetails, fighterObjectMaker, eventObjectMaker 
+from scraper import get_fighter_info
+from collector.links import getFighterProfileLinks
 # dumps all data into jsons
-from src.util.dump import dump
+from util.dump import dump
 # keeps track of runtime
 import timeit
-
 
 
 # runs all functions and updates jsons 

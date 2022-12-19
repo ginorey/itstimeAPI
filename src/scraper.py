@@ -1,10 +1,7 @@
 # Web Scraping
-import requests as r
 import json
 # read html
-from util import url_reader
-from models.models import Fighter
-from models.models import Event
+from util.url_reader import url_reader
 from collector.fighter import fighterName, fighterDescription, fighterNickname, fighterRecord
 from collector.events import fightDetails
 from objects import eventObjectMaker, fighterObjectMaker

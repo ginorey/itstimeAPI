@@ -1,6 +1,5 @@
 import json
-from scraper import getFighterProfileLinks, get_fighter_info
-from models.models import FighterJSONENCODER
+from models.encoder import FighterJSONENCODER
 
 class dump:
     # dumps all fighter links into fighter_links.son
@@ -10,5 +9,5 @@ class dump:
 
     # dumps all fighter info into fighter_info.json
     def fighter_info(fighter):
-        with open('data/data.json', 'w', encoding='utf-8') as f:
+        with open('src/data/data.json', 'w', encoding='utf-8') as f:
             json.dump(fighter, f, cls=FighterJSONENCODER,ensure_ascii=False, indent=4)
