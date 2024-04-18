@@ -9,7 +9,7 @@
   <h3 align="center">itsTimeAPI</h3>
 
   <p align="center">
-    Free Open Source UFC API [DEPRECIATED]
+    Free Open Source UFC API [NO LONGER WORKS]
     <br />
     <a href="https://github.com/ginorey/itstimeAPI"><strong>Explore the docs »</strong></a>
     <br />
